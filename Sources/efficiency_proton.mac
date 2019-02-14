@@ -1,0 +1,21 @@
+/gate/source/addSource proton_efficiency
+/gate/source/proton_efficiency/gps/particle proton
+
+/gate/source/proton_efficiency/gps/energytype UserSpectrum
+/gate/source/proton_efficiency/gps/setSpectrumFile ../Sources/proton_hist.txt
+#/gate/source/proton_efficiency/gps/emin 1 MeV
+#/gate/source/proton_efficiency/gps/emax 4 MeV
+
+
+
+
+/gate/source/proton_efficiency/gps/type Point
+/gate/source/proton_efficiency/gps/centre 0. 0. 100. mm
+/gate/source/proton_efficiency/gps/angtype iso
+
+/gate/source/proton_efficiency/gps/mintheta 0. deg 
+/gate/source/proton_efficiency/gps/maxtheta 0. deg 
+/gate/source/proton_efficiency/gps/minphi 180. deg 
+/gate/source/proton_efficiency/gps/maxphi 180. deg 
+
+

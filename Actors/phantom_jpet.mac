@@ -1,0 +1,18 @@
+#JPET actor 
+/gate/actor/addActor JPETActor jpet_phantom
+/gate/actor/jpet_phantom/save output/jpet_phantom.root
+/gate/actor/jpet_phantom/attachTo phantom
+/gate/actor/jpet_phantom/enableXPosition yes
+/gate/actor/jpet_phantom/enableYPosition yes
+/gate/actor/jpet_phantom/enableZPosition yes
+/gate/actor/jpet_phantom/enableParticleName yes
+/gate/actor/jpet_phantom/enableTrackID yes
+/gate/actor/jpet_phantom/enableEventID yes
+/gate/actor/jpet_phantom/enableParentID yes
+/gate/actor/jpet_phantom/enableRunID yes
+/gate/actor/jpet_phantom/enableEkin yes
+/gate/actor/jpet_phantom/enableInteractionTime yes
+/gate/actor/jpet_phantom/enableProcessName yes
+/gate/actor/jpet_phantom/enableEmissionPoint yes
+/gate/actor/jpet_phantom/enablePrimaryEnergy yes
+#/gate/actor/jpet_phantom/saveEveryNSeconds 1

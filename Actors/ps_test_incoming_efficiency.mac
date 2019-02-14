@@ -1,0 +1,21 @@
+/gate/actor/addActor PhaseSpaceActor ps_actor_incoming
+
+/gate/actor/ps_actor_incoming/save output/ps_actor_phantom_incoming.root
+/gate/actor/ps_actor_incoming/attachTo plastic
+
+/gate/actor/ps_actor_incoming/storeOutgoingParticles false
+/gate/actor/ps_actor_incoming/enableTime true
+/gate/actor/ps_actor_incoming/enableLocalTime false
+/gate/actor/ps_actor_incoming/enableEmissionPoint true
+
+/gate/actor/ps_actor_incoming/enableProductionVolume true
+/gate/actor/ps_actor_incoming/enableWeight false
+/gate/actor/ps_actor_incoming/enableMass false
+/gate/actor/ps_actor_incoming/enableXDirection true
+/gate/actor/ps_actor_incoming/enableYDirection true
+/gate/actor/ps_actor_incoming/enableZDirection true
+
+/gate/actor/ps_actor_incoming/enablePDGCode false
+
+#/gate/actor/ps_actor_incoming/enableTOut true
+#/gate/actor/ps_actor_incoming/enableTProd true

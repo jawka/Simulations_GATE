@@ -1,0 +1,83 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 1000. mm
+/gate/world/geometry/setYLength 1000. mm
+/gate/world/geometry/setZLength 1410. mm
+
+# SCANNER
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert box
+/gate/scanner/setMaterial Air
+/gate/scanner/geometry/setXLength 110. mm
+/gate/scanner/geometry/setYLength 650. mm
+/gate/scanner/geometry/setZLength 260. mm
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor red
+
+# HEAD OF 2x5 MODULES
+
+/gate/scanner/daughters/name head
+/gate/scanner/daughters/insert box
+/gate/head/placement/setTranslation 0.0 310.0 0.0 mm
+/gate/head/geometry/setXLength 101. mm
+/gate/head/geometry/setYLength 20. mm
+/gate/head/geometry/setZLength 251. mm
+/gate/head/setMaterial Air
+/gate/head/vis/forceWireframe 1
+/gate/head/vis/forceSolid 0
+/gate/head/vis/setColor blue
+
+# MODULE OF 16x16 CRYSTALS
+
+/gate/head/daughters/name module
+/gate/head/daughters/insert box
+/gate/module/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/module/geometry/setXLength 50. mm
+/gate/module/geometry/setYLength 20. mm
+/gate/module/geometry/setZLength 50. mm
+/gate/module/setMaterial Air
+/gate/module/vis/forceWireframe 1
+/gate/module/vis/forceSolid 0
+/gate/module/vis/setColor blue
+
+	
+# LSO
+
+/gate/module/daughters/name lso_crystal
+/gate/module/daughters/insert box
+/gate/lso_crystal/placement/setTranslation 0.0 0.0 0 mm
+/gate/lso_crystal/geometry/setXLength 3. mm
+/gate/lso_crystal/geometry/setYLength 20. mm
+/gate/lso_crystal/geometry/setZLength 3. mm
+/gate/lso_crystal/setMaterial LSO
+/gate/lso_crystal/vis/forceSolid 1
+/gate/lso_crystal/vis/setColor white
+
+# REPEATERS
+
+# LSO in MODULE
+/gate/lso_crystal/repeaters/insert cubicArray
+/gate/lso_crystal/cubicArray/setRepeatNumberX 16
+/gate/lso_crystal/cubicArray/setRepeatNumberY 1
+/gate/lso_crystal/cubicArray/setRepeatNumberZ 16
+/gate/lso_crystal/cubicArray/setRepeatVector 3.125 0.0 3.125 mm
+
+# MODULE in HEAD
+/gate/module/repeaters/insert cubicArray
+/gate/module/cubicArray/setRepeatNumberX 2
+/gate/module/cubicArray/setRepeatNumberY 1
+/gate/module/cubicArray/setRepeatNumberZ 5
+/gate/module/cubicArray/setRepeatVector 50. 0. 50. mm
+
+# HEAD in the whole ring
+
+/gate/head/repeaters/insert ring
+/gate/head/ring/setRepeatNumber 2
+
+# ATTACHEMENTS
+
+/gate/systems/scanner/level1/attach head
+/gate/systems/scanner/level2/attach module
+/gate/systems/scanner/level3/attach lso_crystal
+

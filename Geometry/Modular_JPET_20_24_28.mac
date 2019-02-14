@@ -1,0 +1,507 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 1000. mm
+/gate/world/geometry/setYLength 1000. mm
+/gate/world/geometry/setZLength 1410. mm
+
+# SCANNER
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert cylinder
+/gate/scanner/setMaterial Air
+/gate/scanner/geometry/setRmin 280. mm
+/gate/scanner/geometry/setRmax 477 mm
+/gate/scanner/geometry/setHeight 912. mm
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor red
+
+# FIRST MODULE WITH PLASTIC + SIPM + SHIELD
+
+/gate/scanner/daughters/name module
+/gate/scanner/daughters/insert box
+/gate/module/placement/setTranslation 0.0 381.86 0.0 mm
+/gate/module/geometry/setXLength 96 mm
+/gate/module/geometry/setYLength 34 mm
+/gate/module/geometry/setZLength 912. mm
+/gate/module/setMaterial Air
+/gate/module/vis/forceWireframe 1
+/gate/module/vis/forceSolid 0
+/gate/module/vis/setColor blue
+
+# FIRST MODULE WITH PLASTIC + SIPM + SHIELD
+
+/gate/scanner/daughters/name module20
+/gate/scanner/daughters/insert box
+/gate/module20/placement/setTranslation 0.0 318.22 0.0 mm
+/gate/module20/geometry/setXLength 96 mm
+/gate/module20/geometry/setYLength 34 mm
+/gate/module20/geometry/setZLength 912. mm
+/gate/module20/setMaterial Air
+/gate/module20/vis/forceWireframe 1
+/gate/module20/vis/forceSolid 0
+/gate/module20/vis/setColor blue
+
+# FIRST MODULE WITH PLASTIC + SIPM + SHIELD
+
+/gate/scanner/daughters/name module28
+/gate/scanner/daughters/insert box
+/gate/module28/placement/setTranslation 0.0 445.50 0.0 mm
+/gate/module28/geometry/setXLength 96 mm
+/gate/module28/geometry/setYLength 34 mm
+/gate/module28/geometry/setZLength 912. mm
+/gate/module28/setMaterial Air
+/gate/module28/vis/forceWireframe 1
+/gate/module28/vis/forceSolid 0
+/gate/module28/vis/setColor blue
+
+	
+# SHIELD 1 THINK ABOUT THE ALU !!!!
+
+/gate/module/daughters/name shield1
+/gate/module/daughters/insert box
+/gate/shield1/placement/setTranslation 0.0 0.0 342.0 mm
+/gate/shield1/geometry/setXLength 96. mm
+/gate/shield1/geometry/setYLength 34. mm
+/gate/shield1/geometry/setZLength 228. mm
+/gate/shield1/setMaterial Plastic
+/gate/shield1/vis/forceWireframe
+/gate/shield1/vis/setColor grey
+
+/gate/shield1/daughters/name shield1_air
+/gate/shield1/daughters/insert box
+/gate/shield1_air/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield1_air/geometry/setXLength 91. mm
+/gate/shield1_air/geometry/setYLength 24.5 mm
+/gate/shield1_air/geometry/setZLength 228. mm
+/gate/shield1_air/setMaterial Air
+/gate/shield1_air/vis/forceWireframe
+/gate/shield1_air/vis/setColor grey
+
+# SHIELD 2 THINK ABOUT THE ALU !!!!
+/gate/module/daughters/name shield2
+/gate/module/daughters/insert box
+/gate/shield2/placement/setTranslation 0.0 0.0 -342.0 mm
+/gate/shield2/geometry/setXLength 96. mm
+/gate/shield2/geometry/setYLength 34. mm
+/gate/shield2/geometry/setZLength 228. mm
+/gate/shield2/setMaterial Plastic
+/gate/shield2/vis/forceWireframe
+/gate/shield2/vis/setColor grey
+
+/gate/shield2/daughters/name shield2_air
+/gate/shield2/daughters/insert box
+/gate/shield2_air/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield2_air/geometry/setXLength 91. mm
+/gate/shield2_air/geometry/setYLength 24.5 mm
+/gate/shield2_air/geometry/setZLength 228. mm
+/gate/shield2_air/setMaterial Air
+/gate/shield2_air/vis/forceWireframe
+/gate/shield2_air/vis/setColor grey
+
+# SHIELD 1 THINK ABOUT THE ALU !!!!
+
+/gate/module20/daughters/name shield1_20
+/gate/module20/daughters/insert box
+/gate/shield1_20/placement/setTranslation 0.0 0.0 342.0 mm
+/gate/shield1_20/geometry/setXLength 96. mm
+/gate/shield1_20/geometry/setYLength 34. mm
+/gate/shield1_20/geometry/setZLength 228. mm
+/gate/shield1_20/setMaterial Plastic
+/gate/shield1_20/vis/forceWireframe
+/gate/shield1_20/vis/setColor grey
+
+/gate/shield1_20/daughters/name shield1_air20
+/gate/shield1_20/daughters/insert box
+/gate/shield1_air20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield1_air20/geometry/setXLength 91. mm
+/gate/shield1_air20/geometry/setYLength 24.5 mm
+/gate/shield1_air20/geometry/setZLength 228. mm
+/gate/shield1_air20/setMaterial Air
+/gate/shield1_air20/vis/forceWireframe
+/gate/shield1_air20/vis/setColor grey
+
+# SHIELD 2 THINK ABOUT THE ALU !!!!
+/gate/module20/daughters/name shield2_20
+/gate/module20/daughters/insert box
+/gate/shield2_20/placement/setTranslation 0.0 0.0 -342.0 mm
+/gate/shield2_20/geometry/setXLength 96. mm
+/gate/shield2_20/geometry/setYLength 34. mm
+/gate/shield2_20/geometry/setZLength 228. mm
+/gate/shield2_20/setMaterial Plastic
+/gate/shield2_20/vis/forceWireframe
+/gate/shield2_20/vis/setColor grey
+
+/gate/shield2_20/daughters/name shield2_air20
+/gate/shield2_20/daughters/insert box
+/gate/shield2_air20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield2_air20/geometry/setXLength 91. mm
+/gate/shield2_air20/geometry/setYLength 24.5 mm
+/gate/shield2_air20/geometry/setZLength 228. mm
+/gate/shield2_air20/setMaterial Air
+/gate/shield2_air20/vis/forceWireframe
+/gate/shield2_air20/vis/setColor grey
+
+# SHIELD 1 THINK ABOUT THE ALU !!!!
+
+/gate/module28/daughters/name shield1_28
+/gate/module28/daughters/insert box
+/gate/shield1_28/placement/setTranslation 0.0 0.0 342.0 mm
+/gate/shield1_28/geometry/setXLength 96. mm
+/gate/shield1_28/geometry/setYLength 34. mm
+/gate/shield1_28/geometry/setZLength 228. mm
+/gate/shield1_28/setMaterial Plastic
+/gate/shield1_28/vis/forceWireframe
+/gate/shield1_28/vis/setColor grey
+
+/gate/shield1_28/daughters/name shield1_air28
+/gate/shield1_28/daughters/insert box
+/gate/shield1_air28/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield1_air28/geometry/setXLength 91. mm
+/gate/shield1_air28/geometry/setYLength 24.5 mm
+/gate/shield1_air28/geometry/setZLength 228. mm
+/gate/shield1_air28/setMaterial Air
+/gate/shield1_air28/vis/forceWireframe
+/gate/shield1_air28/vis/setColor grey
+
+# SHIELD 2 THINK ABOUT THE ALU !!!!
+/gate/module28/daughters/name shield2_28
+/gate/module28/daughters/insert box
+/gate/shield2_28/placement/setTranslation 0.0 0.0 -342.0 mm
+/gate/shield2_28/geometry/setXLength 96. mm
+/gate/shield2_28/geometry/setYLength 34. mm
+/gate/shield2_28/geometry/setZLength 228. mm
+/gate/shield2_28/setMaterial Plastic
+/gate/shield2_28/vis/forceWireframe
+/gate/shield2_28/vis/setColor grey
+
+/gate/shield2_28/daughters/name shield2_air28
+/gate/shield2_28/daughters/insert box
+/gate/shield2_air28/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield2_air28/geometry/setXLength 91. mm
+/gate/shield2_air28/geometry/setYLength 24.5 mm
+/gate/shield2_air28/geometry/setZLength 228. mm
+/gate/shield2_air28/setMaterial Air
+/gate/shield2_air28/vis/forceWireframe
+/gate/shield2_air28/vis/setColor grey
+
+
+
+# PLASTICS WITH WRAPPING + SIPM
+# active_volume consists of two layers of wrapping, plastics and sipms
+
+/gate/module/daughters/name active_volume
+/gate/module/daughters/insert box
+/gate/active_volume/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/active_volume/geometry/setXLength 90.5 mm
+/gate/active_volume/geometry/setYLength 24.5 mm
+/gate/active_volume/geometry/setZLength 502. mm
+/gate/active_volume/setMaterial Air
+/gate/active_volume/vis/forceWireframe 0
+/gate/active_volume/vis/setColor magenta
+
+#SiPM 1
+
+/gate/active_volume/daughters/name sipm1
+/gate/active_volume/daughters/insert box
+/gate/sipm1/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/sipm1/geometry/setXLength 90 mm
+/gate/sipm1/geometry/setYLength 24 mm
+/gate/sipm1/geometry/setZLength 1. mm
+/gate/sipm1/setMaterial Air
+/gate/sipm1/vis/forceSolid
+/gate/sipm1/vis/setColor red
+
+
+#SiPM 2
+
+/gate/active_volume/daughters/name sipm2
+/gate/active_volume/daughters/insert box
+/gate/sipm2/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/sipm2/geometry/setXLength 90 mm
+/gate/sipm2/geometry/setYLength 24 mm
+/gate/sipm2/geometry/setZLength 1. mm
+/gate/sipm2/setMaterial Air
+/gate/sipm2/vis/forceSolid
+/gate/sipm2/vis/setColor red
+
+# PLASTICS WITH WRAPPING + SIPM
+# active_volume consists of two layers of wrapping, plastics and sipms
+
+/gate/module20/daughters/name active_volume20
+/gate/module20/daughters/insert box
+/gate/active_volume20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/active_volume20/geometry/setXLength 90.5 mm
+/gate/active_volume20/geometry/setYLength 24.5 mm
+/gate/active_volume20/geometry/setZLength 502. mm
+/gate/active_volume20/setMaterial Air
+/gate/active_volume20/vis/forceWireframe 0
+/gate/active_volume20/vis/setColor magenta
+
+#SiPM 1
+
+/gate/active_volume20/daughters/name sipm1_20
+/gate/active_volume20/daughters/insert box
+/gate/sipm1_20/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/sipm1_20/geometry/setXLength 90 mm
+/gate/sipm1_20/geometry/setYLength 24 mm
+/gate/sipm1_20/geometry/setZLength 1. mm
+/gate/sipm1_20/setMaterial Air
+/gate/sipm1_20/vis/forceSolid
+/gate/sipm1_20/vis/setColor red
+
+
+#SiPM 2
+
+/gate/active_volume20/daughters/name sipm2_20
+/gate/active_volume20/daughters/insert box
+/gate/sipm2_20/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/sipm2_20/geometry/setXLength 90 mm
+/gate/sipm2_20/geometry/setYLength 24 mm
+/gate/sipm2_20/geometry/setZLength 1. mm
+/gate/sipm2_20/setMaterial Air
+/gate/sipm2_20/vis/forceSolid
+/gate/sipm2_20/vis/setColor red
+
+# PLASTICS WITH WRAPPING + SIPM
+# active_volume consists of two layers of wrapping, plastics and sipms
+
+/gate/module28/daughters/name active_volume28
+/gate/module28/daughters/insert box
+/gate/active_volume28/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/active_volume28/geometry/setXLength 90.5 mm
+/gate/active_volume28/geometry/setYLength 24.5 mm
+/gate/active_volume28/geometry/setZLength 502. mm
+/gate/active_volume28/setMaterial Air
+/gate/active_volume28/vis/forceWireframe 0
+/gate/active_volume28/vis/setColor magenta
+
+#SiPM 1
+
+/gate/active_volume28/daughters/name sipm1_28
+/gate/active_volume28/daughters/insert box
+/gate/sipm1_28/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/sipm1_28/geometry/setXLength 90 mm
+/gate/sipm1_28/geometry/setYLength 24 mm
+/gate/sipm1_28/geometry/setZLength 1. mm
+/gate/sipm1_28/setMaterial Air
+/gate/sipm1_28/vis/forceSolid
+/gate/sipm1_28/vis/setColor red
+
+
+#SiPM 2
+
+/gate/active_volume28/daughters/name sipm2_28
+/gate/active_volume28/daughters/insert box
+/gate/sipm2_28/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/sipm2_28/geometry/setXLength 90 mm
+/gate/sipm2_28/geometry/setYLength 24 mm
+/gate/sipm2_28/geometry/setZLength 1. mm
+/gate/sipm2_28/setMaterial Air
+/gate/sipm2_28/vis/forceSolid
+/gate/sipm2_28/vis/setColor red
+
+
+
+# ALL PANELs
+
+/gate/active_volume/daughters/name all_panels
+/gate/active_volume/daughters/insert box
+/gate/all_panels/placement/setTranslation 0.0 0.0 0 mm
+/gate/all_panels/geometry/setXLength 90.5 mm
+/gate/all_panels/geometry/setYLength 24.5 mm
+/gate/all_panels/geometry/setZLength 500. mm
+/gate/all_panels/setMaterial Air
+/gate/all_panels/vis/forceWireframe 1
+/gate/all_panels/vis/setColor magenta
+
+# ALL PANELs
+
+/gate/active_volume20/daughters/name all_panels20
+/gate/active_volume20/daughters/insert box
+/gate/all_panels20/placement/setTranslation 0.0 0.0 0 mm
+/gate/all_panels20/geometry/setXLength 90.5 mm
+/gate/all_panels20/geometry/setYLength 24.5 mm
+/gate/all_panels20/geometry/setZLength 500. mm
+/gate/all_panels20/setMaterial Air
+/gate/all_panels20/vis/forceWireframe 1
+/gate/all_panels20/vis/setColor magenta
+
+# ALL PANELs
+
+/gate/active_volume28/daughters/name all_panels28
+/gate/active_volume28/daughters/insert box
+/gate/all_panels28/placement/setTranslation 0.0 0.0 0 mm
+/gate/all_panels28/geometry/setXLength 90.5 mm
+/gate/all_panels28/geometry/setYLength 24.5 mm
+/gate/all_panels28/geometry/setZLength 500. mm
+/gate/all_panels28/setMaterial Air
+/gate/all_panels28/vis/forceWireframe 1
+/gate/all_panels28/vis/setColor magenta
+
+
+# SINGLE PANEL WITH WRAPPING (EXTERNAL LAYER)
+
+/gate/all_panels/daughters/name single_panel
+/gate/all_panels/daughters/insert box
+/gate/single_panel/placement/setTranslation 0.0 0.0 0 mm
+/gate/single_panel/geometry/setXLength 6.2062 mm
+/gate/single_panel/geometry/setYLength 24.2062 mm
+/gate/single_panel/geometry/setZLength 500. mm
+/gate/single_panel/setMaterial Kapton
+/gate/single_panel/vis/forceWireframe 1
+/gate/single_panel/vis/setColor yellow
+
+# SINGLE PANEL WITH WRAPPING (EXTERNAL LAYER)
+
+/gate/all_panels20/daughters/name single_panel20
+/gate/all_panels20/daughters/insert box
+/gate/single_panel20/placement/setTranslation 0.0 0.0 0 mm
+/gate/single_panel20/geometry/setXLength 6.2062 mm
+/gate/single_panel20/geometry/setYLength 24.2062 mm
+/gate/single_panel20/geometry/setZLength 500. mm
+/gate/single_panel20/setMaterial Kapton
+/gate/single_panel20/vis/forceWireframe 1
+/gate/single_panel20/vis/setColor yellow
+
+# SINGLE PANEL WITH WRAPPING (EXTERNAL LAYER)
+
+/gate/all_panels28/daughters/name single_panel28
+/gate/all_panels28/daughters/insert box
+/gate/single_panel28/placement/setTranslation 0.0 0.0 0 mm
+/gate/single_panel28/geometry/setXLength 6.2062 mm
+/gate/single_panel28/geometry/setYLength 24.2062 mm
+/gate/single_panel28/geometry/setZLength 500. mm
+/gate/single_panel28/setMaterial Kapton
+/gate/single_panel28/vis/forceWireframe 1
+/gate/single_panel28/vis/setColor yellow
+
+
+
+# INTERNAL LAYER IN SINGLE PANEL
+
+/gate/single_panel/daughters/name internal_layer
+/gate/single_panel/daughters/insert box
+/gate/internal_layer/placement/setTranslation 0.0 0.0 0 mm
+/gate/internal_layer/geometry/setXLength 6.0762 mm
+/gate/internal_layer/geometry/setYLength 24.0762 mm
+/gate/internal_layer/geometry/setZLength 500. mm
+# THE MATERIAL SHOULD BE THE VIKUITI FOIL - NOT ACHIEVABLE FOR US SO FAR
+/gate/internal_layer/setMaterial Air
+/gate/internal_layer/vis/forceWireframe 1
+/gate/internal_layer/vis/setColor yellow
+
+# INTERNAL LAYER IN SINGLE PANEL
+
+/gate/single_panel20/daughters/name internal_layer20
+/gate/single_panel20/daughters/insert box
+/gate/internal_layer20/placement/setTranslation 0.0 0.0 0 mm
+/gate/internal_layer20/geometry/setXLength 6.0762 mm
+/gate/internal_layer20/geometry/setYLength 24.0762 mm
+/gate/internal_layer20/geometry/setZLength 500. mm
+# THE MATERIAL SHOULD BE THE VIKUITI FOIL - NOT ACHIEVABLE FOR US SO FAR
+/gate/internal_layer20/setMaterial Air
+/gate/internal_layer20/vis/forceWireframe 1
+/gate/internal_layer20/vis/setColor yellow
+
+# INTERNAL LAYER IN SINGLE PANEL
+
+/gate/single_panel28/daughters/name internal_layer28
+/gate/single_panel28/daughters/insert box
+/gate/internal_layer28/placement/setTranslation 0.0 0.0 0 mm
+/gate/internal_layer28/geometry/setXLength 6.0762 mm
+/gate/internal_layer28/geometry/setYLength 24.0762 mm
+/gate/internal_layer28/geometry/setZLength 500. mm
+# THE MATERIAL SHOULD BE THE VIKUITI FOIL - NOT ACHIEVABLE FOR US SO FAR
+/gate/internal_layer28/setMaterial Air
+/gate/internal_layer28/vis/forceWireframe 1
+/gate/internal_layer28/vis/setColor yellow
+
+
+# PLASTIC
+
+/gate/internal_layer/daughters/name plastic
+/gate/internal_layer/daughters/insert box
+/gate/plastic/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic/geometry/setXLength 6 mm
+/gate/plastic/geometry/setYLength 24 mm
+/gate/plastic/geometry/setZLength 500. mm
+/gate/plastic/setMaterial EJ230
+/gate/plastic/vis/forceSolid
+/gate/plastic/vis/setColor white
+
+# PLASTIC
+
+/gate/internal_layer20/daughters/name plastic20
+/gate/internal_layer20/daughters/insert box
+/gate/plastic20/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic20/geometry/setXLength 6 mm
+/gate/plastic20/geometry/setYLength 24 mm
+/gate/plastic20/geometry/setZLength 500. mm
+/gate/plastic20/setMaterial EJ230
+/gate/plastic20/vis/forceSolid
+/gate/plastic20/vis/setColor white
+
+# PLASTIC
+
+/gate/internal_layer28/daughters/name plastic28
+/gate/internal_layer28/daughters/insert box
+/gate/plastic28/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic28/geometry/setXLength 6 mm
+/gate/plastic28/geometry/setYLength 24 mm
+/gate/plastic28/geometry/setZLength 500. mm
+/gate/plastic28/setMaterial EJ230
+/gate/plastic28/vis/forceSolid
+/gate/plastic28/vis/setColor white
+
+
+# REPEATERS
+
+# SINGLE_PANEL in ALL_PANELS
+/gate/single_panel/repeaters/insert cubicArray
+/gate/single_panel/cubicArray/setRepeatNumberX 13
+/gate/single_panel/cubicArray/setRepeatNumberY 1
+/gate/single_panel/cubicArray/setRepeatNumberZ 1
+/gate/single_panel/cubicArray/setRepeatVector 7. 0. 0. mm
+
+# MODULE in the whole ring
+
+/gate/module/repeaters/insert ring
+/gate/module/ring/setRepeatNumber 24
+
+# REPEATERS
+
+# SINGLE_PANEL in ALL_PANELS
+/gate/single_panel20/repeaters/insert cubicArray
+/gate/single_panel20/cubicArray/setRepeatNumberX 13
+/gate/single_panel20/cubicArray/setRepeatNumberY 1
+/gate/single_panel20/cubicArray/setRepeatNumberZ 1
+/gate/single_panel20/cubicArray/setRepeatVector 7. 0. 0. mm
+
+# MODULE in the whole ring
+
+/gate/module20/repeaters/insert ring
+/gate/module20/ring/setRepeatNumber 20
+
+# REPEATERS
+
+# SINGLE_PANEL in ALL_PANELS
+/gate/single_panel28/repeaters/insert cubicArray
+/gate/single_panel28/cubicArray/setRepeatNumberX 13
+/gate/single_panel28/cubicArray/setRepeatNumberY 1
+/gate/single_panel28/cubicArray/setRepeatNumberZ 1
+/gate/single_panel28/cubicArray/setRepeatVector 7. 0. 0. mm
+
+# MODULE in the whole ring
+
+/gate/module28/repeaters/insert ring
+/gate/module28/ring/setRepeatNumber 28
+
+# ATTACHEMENTS
+
+/gate/systems/scanner/level1/attach module
+/gate/systems/scanner/level2/attach single_panel
+/gate/systems/scanner/level3/attach module20
+/gate/systems/scanner/level4/attach single_panel20
+/gate/systems/scanner/level5/attach module28
+/gate/systems/scanner/level6/attach single_panel28
+

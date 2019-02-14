@@ -1,0 +1,21 @@
+/gate/actor/addActor PhaseSpaceActor ps_actor
+
+/gate/actor/ps_actor/save output/ps_actor_phantom.root
+/gate/actor/ps_actor/attachTo phantom
+
+/gate/actor/ps_actor/storeSecondaries true
+/gate/actor/ps_actor/enableTime true
+/gate/actor/ps_actor/enableLocalTime false
+/gate/actor/ps_actor/enableEmissionPoint true
+
+/gate/actor/ps_actor/enableProductionVolume false
+/gate/actor/ps_actor/enableWeight false
+/gate/actor/ps_actor/enableMass false
+/gate/actor/ps_actor/enableXDirection true
+/gate/actor/ps_actor/enableYDirection true
+/gate/actor/ps_actor/enableZDirection true
+
+/gate/actor/ps_actor/enablePDGCode false
+
+/gate/actor/ps_actor/enableTOut true
+/gate/actor/ps_actor/enableTProd true

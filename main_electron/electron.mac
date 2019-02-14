@@ -1,0 +1,93 @@
+#=====================================================
+# VISUALISATION
+#=====================================================
+
+/vis/disable
+#/vis/enable
+#/control/execute ../Visualisation/visu.mac
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+
+/control/execute ../Verbose/verbose.mac
+
+#=====================================================
+# MATERIALS
+#=====================================================
+
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+
+/control/execute ../Geometry/Modular_JPET_electron.mac
+/gate/plastic/attachCrystalSD
+
+/gate/geometry/setIonisationPotential PMMA 74. eV
+
+#=====================================================
+# PHANTOM
+#=====================================================
+
+/control/execute ../Phantom/pmma_500mm_center.mac
+/gate/phantom/attachPhantomSD
+
+#=====================================================
+# PHYSICS
+#=====================================================
+
+/control/execute ../Physics/electron.mac
+
+#=====================================================
+# ACTORS
+#=====================================================
+
+# Statistics for the phantom
+/control/execute ../Actors/phantom_statistics.mac
+
+# Dose actor for the phantom
+/control/execute ../Actors/phantom_dose_proton.mac
+
+# Phase Space Actor
+/control/execute ../Actors/ps_test_electron.mac
+/control/execute ../Actors/ps_test_outgoing_electron.mac
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+/gate/physics/print output/physics.txt
+
+#=====================================================
+# SOURCE
+#=====================================================
+
+/control/execute ../Sources/electronbeam.mac
+
+#=====================================================
+# OUTPUT
+#=====================================================
+
+/control/execute ../Outputs/Output_scanner.mac
+
+#=====================================================
+# RANDOM
+#=====================================================
+
+/gate/random/setEngineName MersenneTwister
+#/gate/random/setEngineSeed 123456789
+/gate/random/setEngineSeed auto
+
+#=====================================================
+# ACQUISITION SETTINGS   
+#=====================================================
+
+#/tracking/verbose 1
+
+/gate/application/setTotalNumberOfPrimaries 10000000
+/gate/application/setTimeStart 0. ms
+/gate/application/setTimeStop 1. ms
+/gate/application/startDAQ

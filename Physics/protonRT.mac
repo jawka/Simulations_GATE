@@ -1,0 +1,2 @@
+/gate/physics/addPhysicsList emstandard_opt3
+/gate/physics/addPhysicsList QGSP_BIC_HP

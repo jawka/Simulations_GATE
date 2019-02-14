@@ -1,0 +1,142 @@
+#=====================================================
+# VISUALISATION
+#=====================================================
+
+/vis/disable
+#/vis/enable
+#/control/execute ../Visualisation/visu.mac
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+
+/control/execute ../Verbose/verbose.mac
+
+#=====================================================
+# MATERIALS
+#=====================================================
+
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+
+/control/execute ../Geometry/Modular_JPET.mac
+/gate/plastic/attachCrystalSD
+
+/gate/geometry/setIonisationPotential PMMA 74. eV
+
+#=====================================================
+# PHANTOM
+#=====================================================
+
+/control/execute ../Phantom/pmma_400mm_center.mac
+#/control/execute ../Phantom/pmma_10mm_center.mac
+/gate/phantom/attachPhantomSD
+
+#=====================================================
+# PHYSICS
+#=====================================================
+
+#/control/execute ../Physics/pet_em.mac
+#/control/execute ../Physics/protonRT.mac
+/control/execute ../Physics/protonRT_our.mac
+
+#=====================================================
+# ACTORS
+#=====================================================
+
+# Statistics for the phantom
+/control/execute ../Actors/phantom_statistics.mac
+
+# Dose actor for the phantom
+/control/execute ../Actors/phantom_dose_proton.mac
+
+# Secondary particles production actor
+#/control/execute ../Actors/phantom_secondary.mac
+
+# Production and stopping actor
+#/control/execute ../Actors/prod_B8.mac
+
+#/control/execute ../Actors/prod_C9.mac
+#/control/execute ../Actors/prod_C10.mac
+#/control/execute ../Actors/prod_C11.mac
+
+#/control/execute ../Actors/prod_N12.mac
+#/control/execute ../Actors/prod_N13.mac
+
+#/control/execute ../Actors/prod_O13.mac
+#/control/execute ../Actors/prod_O14.mac
+#/control/execute ../Actors/prod_O15.mac
+
+#/control/execute ../Actors/prod_P29.mac
+#/control/execute ../Actors/prod_P30.mac
+
+#/control/execute ../Actors/prod_S30.mac
+#/control/execute ../Actors/prod_S31.mac
+
+#/control/execute ../Actors/prod_K37.mac
+#/control/execute ../Actors/prod_K38.mac
+
+#/control/execute ../Actors/prod_Ca38.mac
+#/control/execute ../Actors/prod_Ca39.mac
+
+# JPET actors
+#/control/execute ../Actors/phantom_jpet_gamma.mac
+#/control/execute ../Actors/phantom_jpet_neutron.mac
+#/control/execute ../Actors/phantom_jpet_proton.mac
+#/control/execute ../Actors/phantom_jpet_genericion.mac
+#/control/execute ../Actors/phantom_jpet_positron.mac
+#/control/execute ../Actors/phantom_jpet.mac
+#/control/execute ../Actors/plastic_jpet.mac
+
+# JPET global actors
+#/control/execute ../Actors/global_test.mac
+
+# Phase Space Actor
+/control/execute ../Actors/ps_test.mac
+/control/execute ../Actors/ps_test_outgoing.mac
+#/control/execute ../Actors/ps_test_incoming.mac
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+/gate/physics/print output/physics.txt
+
+#=====================================================
+# SOURCE
+#=====================================================
+
+/control/execute ../Sources/proton_beam_CCB.mac
+#/control/execute ../Sources/proton_beam_test.mac
+#/control/execute ../Sources/point_c_11.mac
+#/control/execute ../Sources/e+_point_source.mac
+#/control/execute ../Sources/point_beta_source.mac
+
+#=====================================================
+# OUTPUT
+#=====================================================
+
+/control/execute ../Outputs/Output_scanner.mac
+
+#=====================================================
+# RANDOM
+#=====================================================
+
+/gate/random/setEngineName MersenneTwister
+#/gate/random/setEngineSeed 123456789
+/gate/random/setEngineSeed auto
+
+#=====================================================
+# ACQUISITION SETTINGS   
+#=====================================================
+
+#/tracking/verbose 1
+
+/gate/application/setTotalNumberOfPrimaries 10000000
+/gate/application/setTimeStart 0. ms
+/gate/application/setTimeStop 1. ms
+/gate/application/startDAQ

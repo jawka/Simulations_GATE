@@ -1,0 +1,15 @@
+# EASY ONE COMPARTMENT PHANTOM
+
+/gate/scanner/daughters/name phantom
+/gate/scanner/daughters/insert box
+/gate/phantom/placement/setTranslation 0.0 0.0 0 mm
+/gate/phantom/geometry/setXLength 500. mm
+/gate/phantom/geometry/setYLength 6. mm
+/gate/phantom/geometry/setZLength 24. mm
+/gate/phantom/setMaterial EJ230
+/gate/phantom/vis/forceSolid
+/gate/phantom/vis/setColor white
+
+
+
+

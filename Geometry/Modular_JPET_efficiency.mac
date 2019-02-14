@@ -1,0 +1,34 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 501. mm
+/gate/world/geometry/setYLength 8. mm
+/gate/world/geometry/setZLength 250. mm
+/gate/world/setMaterial Vacuum
+
+# SCANNER
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert box
+/gate/scanner/setMaterial Vacuum
+/gate/scanner/geometry/setXLength 500. mm
+/gate/scanner/geometry/setYLength 6. mm
+/gate/scanner/geometry/setZLength 80. mm 
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor red
+
+
+# PLASTIC
+
+/gate/scanner/daughters/name plastic
+/gate/scanner/daughters/insert box
+/gate/plastic/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic/geometry/setXLength 500. mm
+/gate/plastic/geometry/setYLength 6. mm
+/gate/plastic/geometry/setZLength 24. mm
+/gate/plastic/setMaterial EJ230
+/gate/plastic/vis/forceSolid
+/gate/plastic/vis/setColor white
+
+/gate/systems/scanner/level1/attach plastic
+
+

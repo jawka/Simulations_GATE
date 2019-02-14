@@ -1,0 +1,187 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 750. mm
+/gate/world/geometry/setYLength 750. mm
+/gate/world/geometry/setZLength 1410. mm
+
+# SCANNER
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert cylinder
+/gate/scanner/setMaterial Air
+/gate/scanner/geometry/setRmin 280 mm
+/gate/scanner/geometry/setRmax 355 mm
+/gate/scanner/geometry/setHeight 912. mm
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor red
+
+# FIRST MODULE WITH PLASTIC + SIPM + SHIELD
+
+/gate/scanner/daughters/name module20
+/gate/scanner/daughters/insert box
+/gate/module20/placement/setTranslation 0.0 318.22 0.0 mm
+/gate/module20/geometry/setXLength 96 mm
+/gate/module20/geometry/setYLength 34 mm
+/gate/module20/geometry/setZLength 912. mm
+/gate/module20/setMaterial Air
+/gate/module20/vis/forceWireframe 1
+/gate/module20/vis/forceSolid 0
+/gate/module20/vis/setColor blue
+
+	
+# SHIELD 1 THINK ABOUT THE ALU !!!!
+
+/gate/module20/daughters/name shield1_20
+/gate/module20/daughters/insert box
+/gate/shield1_20/placement/setTranslation 0.0 0.0 342.0 mm
+/gate/shield1_20/geometry/setXLength 96. mm
+/gate/shield1_20/geometry/setYLength 34. mm
+/gate/shield1_20/geometry/setZLength 228. mm
+/gate/shield1_20/setMaterial Plastic
+/gate/shield1_20/vis/forceWireframe
+/gate/shield1_20/vis/setColor grey
+
+/gate/shield1_20/daughters/name shield1_air20
+/gate/shield1_20/daughters/insert box
+/gate/shield1_air20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield1_air20/geometry/setXLength 91. mm
+/gate/shield1_air20/geometry/setYLength 24.5 mm
+/gate/shield1_air20/geometry/setZLength 228. mm
+/gate/shield1_air20/setMaterial Air
+/gate/shield1_air20/vis/forceWireframe
+/gate/shield1_air20/vis/setColor grey
+
+# SHIELD 2 THINK ABOUT THE ALU !!!!
+/gate/module20/daughters/name shield2_20
+/gate/module20/daughters/insert box
+/gate/shield2_20/placement/setTranslation 0.0 0.0 -342.0 mm
+/gate/shield2_20/geometry/setXLength 96. mm
+/gate/shield2_20/geometry/setYLength 34. mm
+/gate/shield2_20/geometry/setZLength 228. mm
+/gate/shield2_20/setMaterial Plastic
+/gate/shield2_20/vis/forceWireframe
+/gate/shield2_20/vis/setColor grey
+
+/gate/shield2_20/daughters/name shield2_air20
+/gate/shield2_20/daughters/insert box
+/gate/shield2_air20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield2_air20/geometry/setXLength 91. mm
+/gate/shield2_air20/geometry/setYLength 24.5 mm
+/gate/shield2_air20/geometry/setZLength 228. mm
+/gate/shield2_air20/setMaterial Air
+/gate/shield2_air20/vis/forceWireframe
+/gate/shield2_air20/vis/setColor grey
+
+
+# PLASTICS WITH WRAPPING + SIPM
+# active_volume consists of two layers of wrapping, plastics and sipms
+
+/gate/module20/daughters/name active_volume20
+/gate/module20/daughters/insert box
+/gate/active_volume20/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/active_volume20/geometry/setXLength 90.5 mm
+/gate/active_volume20/geometry/setYLength 24.5 mm
+/gate/active_volume20/geometry/setZLength 502. mm
+/gate/active_volume20/setMaterial Air
+/gate/active_volume20/vis/forceWireframe 0
+/gate/active_volume20/vis/setColor magenta
+
+#SiPM 1
+
+/gate/active_volume20/daughters/name sipm1_20
+/gate/active_volume20/daughters/insert box
+/gate/sipm1_20/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/sipm1_20/geometry/setXLength 90 mm
+/gate/sipm1_20/geometry/setYLength 24 mm
+/gate/sipm1_20/geometry/setZLength 1. mm
+/gate/sipm1_20/setMaterial Air
+/gate/sipm1_20/vis/forceSolid
+/gate/sipm1_20/vis/setColor red
+
+
+#SiPM 2
+
+/gate/active_volume20/daughters/name sipm2_20
+/gate/active_volume20/daughters/insert box
+/gate/sipm2_20/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/sipm2_20/geometry/setXLength 90 mm
+/gate/sipm2_20/geometry/setYLength 24 mm
+/gate/sipm2_20/geometry/setZLength 1. mm
+/gate/sipm2_20/setMaterial Air
+/gate/sipm2_20/vis/forceSolid
+/gate/sipm2_20/vis/setColor red
+
+
+# ALL PANELs
+
+/gate/active_volume20/daughters/name all_panels20
+/gate/active_volume20/daughters/insert box
+/gate/all_panels20/placement/setTranslation 0.0 0.0 0 mm
+/gate/all_panels20/geometry/setXLength 90.5 mm
+/gate/all_panels20/geometry/setYLength 24.5 mm
+/gate/all_panels20/geometry/setZLength 500. mm
+/gate/all_panels20/setMaterial Air
+/gate/all_panels20/vis/forceWireframe 1
+/gate/all_panels20/vis/setColor magenta
+
+
+# SINGLE PANEL WITH WRAPPING (EXTERNAL LAYER)
+
+/gate/all_panels20/daughters/name single_panel20
+/gate/all_panels20/daughters/insert box
+/gate/single_panel20/placement/setTranslation 0.0 0.0 0 mm
+/gate/single_panel20/geometry/setXLength 6.2062 mm
+/gate/single_panel20/geometry/setYLength 24.2062 mm
+/gate/single_panel20/geometry/setZLength 500. mm
+/gate/single_panel20/setMaterial Kapton
+/gate/single_panel20/vis/forceWireframe 1
+/gate/single_panel20/vis/setColor yellow
+
+
+# INTERNAL LAYER IN SINGLE PANEL
+
+/gate/single_panel20/daughters/name internal_layer20
+/gate/single_panel20/daughters/insert box
+/gate/internal_layer20/placement/setTranslation 0.0 0.0 0 mm
+/gate/internal_layer20/geometry/setXLength 6.0762 mm
+/gate/internal_layer20/geometry/setYLength 24.0762 mm
+/gate/internal_layer20/geometry/setZLength 500. mm
+# THE MATERIAL SHOULD BE THE VIKUITI FOIL - NOT ACHIEVABLE FOR US SO FAR
+/gate/internal_layer20/setMaterial Air
+/gate/internal_layer20/vis/forceWireframe 1
+/gate/internal_layer20/vis/setColor yellow
+
+# PLASTIC
+
+/gate/internal_layer20/daughters/name plastic20
+/gate/internal_layer20/daughters/insert box
+/gate/plastic20/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic20/geometry/setXLength 6 mm
+/gate/plastic20/geometry/setYLength 24 mm
+/gate/plastic20/geometry/setZLength 500. mm
+/gate/plastic20/setMaterial EJ230
+/gate/plastic20/vis/forceSolid
+/gate/plastic20/vis/setColor white
+
+# REPEATERS
+
+# SINGLE_PANEL in ALL_PANELS
+/gate/single_panel20/repeaters/insert cubicArray
+/gate/single_panel20/cubicArray/setRepeatNumberX 13
+/gate/single_panel20/cubicArray/setRepeatNumberY 1
+/gate/single_panel20/cubicArray/setRepeatNumberZ 1
+/gate/single_panel20/cubicArray/setRepeatVector 7. 0. 0. mm
+
+# MODULE in the whole ring
+
+/gate/module20/repeaters/insert ring
+/gate/module20/ring/setRepeatNumber 20
+
+# ATTACHEMENTS
+
+/gate/systems/scanner/level1/attach module20
+/gate/systems/scanner/level2/attach single_panel20
+/gate/systems/scanner/level3/attach internal_layer20
+/gate/systems/scanner/level4/attach plastic20
+
+

@@ -1,0 +1,16 @@
+# PENCIL BEAM SOURCE
+
+/gate/source/addSource beam PencilBeam
+/gate/source/beam/setParticleType e-
+/gate/source/beam/setEnergy 200 MeV
+/gate/source/beam/setSigmaEnergy 0. MeV
+/gate/source/beam/setPosition 0. 0. -750.0 mm 
+/gate/source/beam/setSigmaX 3. mm
+/gate/source/beam/setSigmaY 3. mm
+/gate/source/beam/setSigmaTheta 0.000001 mrad
+/gate/source/beam/setSigmaPhi 0.000001 mrad
+/gate/source/beam/setEllipseXThetaEmittance 0.00000000000063 mm*mrad
+/gate/source/beam/setEllipseXThetaRotationNorm negative
+/gate/source/beam/setEllipseYPhiEmittance 0.00000000000063 mm*mrad
+/gate/source/beam/setEllipseYPhiRotationNorm negative
+

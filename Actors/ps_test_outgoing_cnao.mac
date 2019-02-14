@@ -1,0 +1,26 @@
+/gate/actor/addActor PhaseSpaceActor ps_actor_outgoing
+
+/gate/actor/ps_actor_outgoing/save output/ps_actor_phantom_outgoing.root
+/gate/actor/ps_actor_outgoing/attachTo phantom
+
+/gate/actor/ps_actor_outgoing/storeOutgoingParticles true
+/gate/actor/ps_actor_outgoing/enableTime true
+/gate/actor/ps_actor_outgoing/enableLocalTime false
+/gate/actor/ps_actor_outgoing/enableEmissionPoint true
+
+/gate/actor/ps_actor_outgoing/enableProductionVolume false
+/gate/actor/ps_actor_outgoing/enableWeight false
+/gate/actor/ps_actor_outgoing/enableMass false
+/gate/actor/ps_actor_outgoing/enableXDirection true
+/gate/actor/ps_actor_outgoing/enableYDirection true
+/gate/actor/ps_actor_outgoing/enableZDirection true
+
+/gate/actor/ps_actor_outgoing/enablePDGCode false
+
+/gate/actor/ps_actor_outgoing/enableTOut true
+/gate/actor/ps_actor_outgoing/enableTProd true
+
+#/gate/actor/ps_actor_outgoing/addFilter particleFilter
+#/gate/actor/ps_actor_outgoing/particleFilter/addParticle gamma
+#/gate/actor/ps_actor_outgoing/particleFilter/addParticle e+
+#/gate/actor/ps_actor_outgoing/particleFilter/addParticle GenericIon
