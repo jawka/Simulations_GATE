@@ -1,0 +1,13 @@
+/gate/source/addSource twogamma
+/gate/source/twogamma/setActivity 1 GBq
+/gate/source/twogamma/setType backtoback
+/gate/source/twogamma/gps/type Cylinder
+/gate/source/twogamma/gps/centre 0. 0. 0. mm
+/gate/source/twogamma/gps/particle gamma
+/gate/source/twogamma/gps/radius 283. mm
+/gate/source/twogamma/gps/halfz 250. mm
+/gate/source/twogamma/gps/energytype Mono
+/gate/source/twogamma/gps/monoenergy 511 keV
+/gate/source/twogamma/gps/angtype iso
+
+
