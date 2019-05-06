@@ -1,0 +1,12 @@
+# EASY ONE COMPARTMENT PHANTOM
+
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert box
+/gate/phantom/placement/setTranslation 100. 100. 125. mm
+/gate/phantom/setMaterial Air
+/gate/phantom/vis/forceWireframe
+/gate/phantom/vis/setColor blue
+/gate/phantom/geometry/setXLength 200. mm
+/gate/phantom/geometry/setYLength 200. mm
+/gate/phantom/geometry/setZLength 250. mm
+

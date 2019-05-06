@@ -1,6 +1,6 @@
 /gate/actor/addActor PhaseSpaceActor ps_actor
 
-/gate/actor/ps_actor/save output/ps_actor_phantom.root
+/gate/actor/ps_actor/save ps_actor_phantom.root
 /gate/actor/ps_actor/attachTo phantom
 
 /gate/actor/ps_actor/storeSecondaries true

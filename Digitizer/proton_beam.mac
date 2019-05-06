@@ -16,11 +16,11 @@
 /gate/digitizer/Singles/insert upholder 
 /gate/digitizer/Singles/upholder/setUphold 380. keV
 
-# COINCIDENCES SORTER
+# COINCIDENCES SORTER 
 
 /gate/digitizer/Coincidences/setInputName Singles
 /gate/digitizer/Coincidences/setOffset 0. ns 
-/gate/digitizer/Coincidences/setWindow 5. ns
+/gate/digitizer/Coincidences/setWindow 3. ns 
 #/gate/digitizer/Coincidences/allPulseOpenCoincGate true
 #/gate/digitizer/Coincidences/MultiplesPolicy takeAllGoods
 #/gate/digitizer/Coincidences/describe
@@ -28,7 +28,7 @@
 # OUTPUT
 
 /gate/output/root/enable
-/gate/output/root/setFileName sensitivity_results
+/gate/output/root/setFileName proton_beam_results
 /gate/output/root/setRootSinglesAdderFlag 0
 /gate/output/root/setRootSinglesReadoutFlag 0
 /gate/output/root/setRootHitFlag 0
@@ -37,14 +37,14 @@
 
 
 /gate/output/ascii/enable
-/gate/output/ascii/setFileName sensitivity_results
+/gate/output/ascii/setFileName proton_beam_results
 /gate/output/ascii/setOutFileHitsFlag 0
 /gate/output/ascii/setOutFileSinglesFlag 1
-/gate/output/ascii/setOutFileCoincidencesFlag 0
+/gate/output/ascii/setOutFileCoincidencesFlag 1
 
 ### COINCIDENCES SORTER 
 
-/gate/digitizer/Coincidences/minSectorDifference 1  
+/gate/digitizer/Coincidences/minSectorDifference 1
 
 ### DEAD TIME 
 

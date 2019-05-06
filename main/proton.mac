@@ -16,6 +16,7 @@
 # MATERIALS
 #=====================================================
 
+#/control/execute Visualisation/visu.mac
 /gate/geometry/setMaterialDatabase GateMaterials.db
 
 #=====================================================

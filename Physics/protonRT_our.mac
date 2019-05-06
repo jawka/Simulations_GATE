@@ -30,4 +30,4 @@
 /gate/physics/processList Initialized
 
 /gate/physics/displayCuts
-/gate/physics/print output/physics.txt
+#/gate/physics/print output/physics.txt

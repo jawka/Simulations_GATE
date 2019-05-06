@@ -1,7 +1,8 @@
 /gate/source/addSource twogamma
 /gate/source/twogamma/setActivity 1 GBq
 /gate/source/twogamma/setType backtoback
-/gate/source/twogamma/gps/type Cylinder
+/gate/source/twogamma/gps/type Volume
+/gate/source/twogamma/gps/shape Cylinder
 /gate/source/twogamma/gps/centre 0. 0. 0. mm
 /gate/source/twogamma/gps/particle gamma
 /gate/source/twogamma/gps/radius 283. mm
