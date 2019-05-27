@@ -1,0 +1,17 @@
+/gate/source/addSource twogamma
+#/gate/source/twogamma/setActivity 50 MBq
+/gate/source/twogamma/setType backtoback
+/gate/source/twogamma/gps/type Volume
+/gate/source/twogamma/gps/shape Para
+/gate/source/twogamma/gps/centre 100. 100. 125.0 mm
+/gate/source/twogamma/gps/particle gamma
+/gate/source/twogamma/gps/halfx 100. mm
+/gate/source/twogamma/gps/halfy 100. mm
+/gate/source/twogamma/gps/halfz 125. mm
+/gate/source/twogamma/gps/paralp 0. deg
+/gate/source/twogamma/gps/parthe 0. deg
+/gate/source/twogamma/gps/parphi 0. deg
+/gate/source/twogamma/gps/energytype Mono
+/gate/source/twogamma/gps/monoenergy 511 keV
+/gate/source/twogamma/gps/angtype iso
+

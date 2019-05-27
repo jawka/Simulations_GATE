@@ -22,13 +22,13 @@
 # GEOMETRY
 #=====================================================
 
-/control/execute ../Geometry/Modular_24_simple.mac
+/control/execute ../Geometry/Modular_dual_2x6_simple.mac
 
 #=====================================================
 # PHANTOM
 #=====================================================
 
-/control/execute ../Phantom/sensitivity.mac
+/control/execute ../Phantom/sensitivity_60cm.mac
 /gate/phantom/attachPhantomSD
 
 #=====================================================
@@ -54,7 +54,7 @@
 # SOURCE
 #=====================================================
 
-/control/execute ../Sources/back_to_back_sensitivity.mac
+/control/execute ../Sources/back_to_back_sensitivity_60cm.mac
 
 #=====================================================
 # OUTPUT + DIGITIZER + COINCIDENCE SORTER
@@ -76,7 +76,7 @@
 
 #/tracking/verbose 1
 
-/gate/application/setTotalNumberOfPrimaries 1000000
+/gate/application/setTotalNumberOfPrimaries 50000000
 /gate/application/setTimeStart 0. s
 /gate/application/setTimeStop 20. s
 /gate/application/startDAQ
