@@ -1,7 +1,7 @@
 # POINT SOURCE
 
 /gate/source/addSource twogamma
-/gate/source/twogamma/setActivity 1 MBq
+#/gate/source/twogamma/setActivity 1 MBq
 /gate/source/twogamma/setType backtoback
 
 /gate/source/twogamma/gps/type Point

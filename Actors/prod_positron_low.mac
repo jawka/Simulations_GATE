@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor 	positron_low
+/gate/actor/positron_low/save				positron_low.hdr
+/gate/actor/positron_low/attachTo			phantom
+/gate/actor/positron_low/stepHitType			post
+/gate/actor/positron_low/setVoxelSize			5. 5. 5. mm
+/gate/actor/positron_low/addFilter			particleFilter
+/gate/actor/positron_low/particleFilter/addParticle	e+

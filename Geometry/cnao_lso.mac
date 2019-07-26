@@ -77,7 +77,7 @@
 
 # ATTACHEMENTS
 
-/gate/systems/scanner/level1/attach head
-/gate/systems/scanner/level2/attach module
-/gate/systems/scanner/level3/attach lso_crystal
+/gate/systems/cylindricalPET/rsector/attach head
+/gate/systems/cylindricalPET/module/attach module
+/gate/systems/cylindricalPET/crystal/attach lso_crystal
 

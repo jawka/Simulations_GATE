@@ -22,22 +22,20 @@
 # GEOMETRY
 #=====================================================
 
-/control/execute ../Geometry/Modular_24_simple.mac
-
-/gate/geometry/setIonisationPotential PMMA 80. eV
+/control/execute ../Geometry/Modular_dual_3x4_simple.mac
 
 #=====================================================
 # PHANTOM
 #=====================================================
 
-/control/execute ../Phantom/pmma_5_5_20_center.mac
+/control/execute ../Phantom/cubic_water.mac
 /gate/phantom/attachPhantomSD
 
 #=====================================================
 # PHYSICS
 #=====================================================
 
-/control/execute ../Physics/protonRT_our.mac
+/control/execute ../Physics/pet_em.mac
 
 #=====================================================
 # ACTORS
@@ -46,35 +44,23 @@
 # Statistics for the phantom
 /control/execute ../Actors/phantom_statistics.mac
 
-# Dose actor for the phantom
-#/control/execute ../Actors/phantom_dose_proton_5_5_20.mac
-
-# Phase Space Actor
-#/control/execute ../Actors/ps_test.mac
-#/control/execute ../Actors/ps_test_outgoing.mac
-
-# Production and stopping images
-#/control/execute ../Actors/prod_positron_high.mac
-#/control/execute ../Actors/prod_positron_low.mac
-
 #=====================================================
 # INITIALISATION
 #=====================================================
-
+#/gate/world/vis/setVisible 0
 /gate/run/initialize
-/gate/physics/print physics.txt
 
 #=====================================================
 # SOURCE
 #=====================================================
 
-/control/execute ../Sources/proton_beam_CCB.mac
+/control/execute ../Sources/phantom_study.mac
 
 #=====================================================
 # OUTPUT + DIGITIZER + COINCIDENCE SORTER
 #=====================================================
 
-/control/execute ../Digitizer/proton_beam.mac
+/control/execute ../Digitizer/sensitivity.mac
 
 #=====================================================
 # RANDOM
@@ -90,7 +76,7 @@
 
 #/tracking/verbose 1
 
-/gate/application/setTotalNumberOfPrimaries 5000000
+/gate/application/setTotalNumberOfPrimaries 50000000
 /gate/application/setTimeStart 0. s
-/gate/application/setTimeStop 10. s
+/gate/application/setTimeStop 1000. s
 /gate/application/startDAQ
