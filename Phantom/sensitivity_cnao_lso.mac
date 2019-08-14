@@ -1,7 +1,7 @@
 # EASY ONE COMPARTMENT PHANTOM
 
-/gate/world/daughters/name phantom
-/gate/world/daughters/insert box
+/gate/cylindricalPET/daughters/name phantom
+/gate/cylindricalPET/daughters/insert box
 /gate/phantom/placement/setTranslation 0. 0. 0. mm
 /gate/phantom/setMaterial Air
 /gate/phantom/vis/forceWireframe

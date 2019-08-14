@@ -3,6 +3,6 @@
 /gate/actor/addActor DoseActor dose_phantom
 /gate/actor/dose_phantom/attachTo phantom
 /gate/actor/dose_phantom/stepHitType random
-/gate/actor/dose_phantom/setResolution 100 100 400
+/gate/actor/dose_phantom/setResolution 250 250 1000
 /gate/actor/dose_phantom/enableDose true
 /gate/actor/dose_phantom/save dose_phantom.mhd

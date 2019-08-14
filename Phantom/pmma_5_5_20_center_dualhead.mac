@@ -1,0 +1,12 @@
+# EASY ONE COMPARTMENT PHANTOM
+
+/gate/cylindricalPET/daughters/name phantom
+/gate/cylindricalPET/daughters/insert box
+/gate/phantom/geometry/setXLength 50. mm
+/gate/phantom/geometry/setYLength 50. mm
+/gate/phantom/geometry/setZLength 200. mm
+/gate/phantom/setMaterial PMMA
+/gate/phantom/vis/setColor white
+/gate/phantom/vis/forceSolid 1
+
+

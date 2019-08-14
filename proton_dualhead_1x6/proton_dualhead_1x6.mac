@@ -22,7 +22,7 @@
 # GEOMETRY
 #=====================================================
 
-/control/execute ../Geometry/Modular_dual3_simple.mac
+/control/execute ../Geometry/Modular_dual_1x6_simple.mac
 
 /gate/geometry/setIonisationPotential PMMA 80. eV
 
@@ -86,7 +86,7 @@
 
 #/tracking/verbose 1
 
-/gate/application/setTotalNumberOfPrimaries 5000000
+/gate/application/setTotalNumberOfPrimaries 10000000
 /gate/application/setTimeStart 0. s
 /gate/application/setTimeStop 10. s
 /gate/application/startDAQ

@@ -16,7 +16,7 @@
 # MATERIALS
 #=====================================================
 
-/gate/geometry/setMaterialDatabase GateMaterials.db
+/gate/geometry/setMaterialDatabase ../GateMaterials.db
 
 #=====================================================
 # GEOMETRY

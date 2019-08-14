@@ -1,24 +1,24 @@
 # WORLD INITIALIZATION
 
-/gate/world/geometry/setXLength 1000. mm
-/gate/world/geometry/setYLength 1000. mm
+/gate/world/geometry/setXLength 750. mm
+/gate/world/geometry/setYLength 750. mm
 /gate/world/geometry/setZLength 1410. mm
 
 # SCANNER
 
-/gate/world/daughters/name scanner
+/gate/world/daughters/name cylindricalPET
 /gate/world/daughters/insert box
-/gate/scanner/setMaterial Air
-/gate/scanner/geometry/setXLength 110. mm
-/gate/scanner/geometry/setYLength 650. mm
-/gate/scanner/geometry/setZLength 260. mm
-/gate/scanner/vis/forceWireframe
-/gate/scanner/vis/setColor red
+/gate/cylindricalPET/setMaterial Air
+/gate/cylindricalPET/geometry/setXLength 700. mm
+/gate/cylindricalPET/geometry/setYLength 700. mm
+/gate/cylindricalPET/geometry/setZLength 260. mm
+/gate/cylindricalPET/vis/forceWireframe
+/gate/cylindricalPET/vis/setColor red
 
 # HEAD OF 2x5 MODULES
 
-/gate/scanner/daughters/name head
-/gate/scanner/daughters/insert box
+/gate/cylindricalPET/daughters/name head
+/gate/cylindricalPET/daughters/insert box
 /gate/head/placement/setTranslation 0.0 310.0 0.0 mm
 /gate/head/geometry/setXLength 101. mm
 /gate/head/geometry/setYLength 20. mm
@@ -73,11 +73,15 @@
 # HEAD in the whole ring
 
 /gate/head/repeaters/insert ring
+/gate/head/ring/setFirstAngle 90 degree
 /gate/head/ring/setRepeatNumber 2
+/gate/head/ring/enableAutoRotation
 
 # ATTACHEMENTS
 
 /gate/systems/cylindricalPET/rsector/attach head
 /gate/systems/cylindricalPET/module/attach module
 /gate/systems/cylindricalPET/crystal/attach lso_crystal
+
+/gate/lso_crystal/attachCrystalSD
 

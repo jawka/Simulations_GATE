@@ -17,7 +17,7 @@
 #=====================================================
 
 #/control/execute Visualisation/visu.mac
-/gate/geometry/setMaterialDatabase GateMaterials.db
+/gate/geometry/setMaterialDatabase ../GateMaterials.db
 
 #=====================================================
 # GEOMETRY

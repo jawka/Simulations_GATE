@@ -16,7 +16,7 @@
 # MATERIALS
 #=====================================================
 
-/gate/geometry/setMaterialDatabase GateMaterials.db
+/gate/geometry/setMaterialDatabase ../GateMaterials.db
 
 #=====================================================
 # GEOMETRY
@@ -30,7 +30,7 @@
 # PHANTOM
 #=====================================================
 
-/control/execute ../Phantom/pmma_5_5_20_center.mac
+/control/execute ../Phantom/pmma_5_5_20_center_dualhead.mac
 /gate/phantom/attachPhantomSD
 
 #=====================================================
