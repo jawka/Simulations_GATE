@@ -4,8 +4,8 @@
 /gate/source/twogamma/gps/shape Para
 /gate/source/twogamma/gps/centre 0. 0. 0. mm
 /gate/source/twogamma/gps/particle gamma
-/gate/source/twogamma/gps/halfx 80. mm
-/gate/source/twogamma/gps/halfy 32. mm
+/gate/source/twogamma/gps/halfx 32. mm
+/gate/source/twogamma/gps/halfy 80. mm
 /gate/source/twogamma/gps/halfz 80. mm
 /gate/source/twogamma/gps/paralp 0. deg
 /gate/source/twogamma/gps/parthe 0. deg

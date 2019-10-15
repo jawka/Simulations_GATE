@@ -1,0 +1,27 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 	3000. mm
+/gate/world/geometry/setYLength 	3000. mm
+/gate/world/geometry/setZLength 	3000. mm
+/gate/world/setMaterial 		Vacuum
+#/gate/world/vis/setVisible 		0
+
+
+# PATIENT INITIALIZATION
+
+#patient virtual container
+/gate/world/daughters/name			patient_box
+/gate/world/daughters/insert 			box
+/gate/patient_box/setMaterial 			Vacuum
+/gate/patient_box/geometry/setXLength		2000. mm
+/gate/patient_box/geometry/setYLength		2000. mm
+/gate/patient_box/geometry/setZLength		2500. mm
+
+# patient
+/gate/patient_box/daughters/name		patient
+/gate/patient_box/daughters/insert		ImageNestedParametrisedVolume
+/gate/geometry/setMaterialDatabase              patient-HUmaterials.db
+/gate/patient/geometry/setHUToMaterialFile      patient-HU2mat.txt
+/gate/patient/geometry/setImage                 ../CT_data/G3P028E0_CT_crop.mhd
+
+/gate/patient/geometry/TranslateTheImageAtThisIsoCenter -0.7 -248.1 -642.3 mm

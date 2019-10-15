@@ -73,7 +73,7 @@
 # HEAD in the whole ring
 
 /gate/head/repeaters/insert ring
-/gate/head/ring/setFirstAngle 90 degree
+#/gate/head/ring/setFirstAngle 90 degree
 /gate/head/ring/setRepeatNumber 2
 /gate/head/ring/enableAutoRotation
 

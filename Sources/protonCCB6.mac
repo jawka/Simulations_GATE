@@ -1,0 +1,16 @@
+# PENCIL BEAM SOURCE
+
+/gate/source/addSource beam PencilBeam
+/gate/source/beam/setParticleType proton
+/gate/source/beam/setEnergy                             152.5907 MeV
+/gate/source/beam/setSigmaEnergy                        1.035951 MeV
+/gate/source/beam/setPosition 0. 0. -500.0 mm
+/gate/source/beam/setSigmaX                             5.347542 mm
+/gate/source/beam/setSigmaY                             3.713962 mm
+/gate/source/beam/setSigmaTheta                         5.401890 mrad
+/gate/source/beam/setSigmaPhi                           3.868513 mrad
+/gate/source/beam/setEllipseXThetaEmittance             66.77149 mm*mrad
+/gate/source/beam/setEllipseXThetaRotationNorm          positive              
+/gate/source/beam/setEllipseYPhiEmittance               45.05595 mm*mrad
+/gate/source/beam/setEllipseYPhiRotationNorm            positive              
+

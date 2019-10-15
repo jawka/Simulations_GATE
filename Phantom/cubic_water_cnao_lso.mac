@@ -5,7 +5,7 @@
 /gate/phantom/setMaterial Water
 /gate/phantom/vis/forceWireframe
 /gate/phantom/vis/setColor blue
-/gate/phantom/geometry/setXLength 160. mm
-/gate/phantom/geometry/setYLength 64. mm
+/gate/phantom/geometry/setXLength 64. mm
+/gate/phantom/geometry/setYLength 160. mm
 /gate/phantom/geometry/setZLength 160. mm
 

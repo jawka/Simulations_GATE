@@ -1,0 +1,15 @@
+# DOSE ACTOR
+
+/gate/actor/addActor DoseActor dose
+/gate/actor/dose/attachTo patient
+/gate/actor/dose/stepHitType random
+/gate/actor/dose/setResolution 512 415 252
+/gate/actor/dose/enableEdep             false
+/gate/actor/dose/enableUncertaintyEdep  false
+/gate/actor/dose/enableSquaredEdep      false
+/gate/actor/dose/enableDose 		true
+/gate/actor/dose/enableUncertaintyDose	false
+/gate/actor/dose/enableSquaredDose      false
+/gate/actor/dose/save dose.mhd
+
+

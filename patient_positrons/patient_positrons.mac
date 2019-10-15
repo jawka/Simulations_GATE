@@ -1,0 +1,85 @@
+#=====================================================
+# VISUALISATION
+#=====================================================
+
+/vis/disable
+#/vis/enable
+#/control/execute ../Visualisation/visu.mac
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+
+/control/execute ../Verbose/verbose.mac
+
+#=====================================================
+# MATERIALS
+#=====================================================
+
+/gate/geometry/setMaterialDatabase ../GateMaterials.db
+
+# Generate materials from Hounsfield units
+#/gate/HounsfieldMaterialGenerator/SetMaterialTable                  ../CT_data/Schneider2000MaterialsTable.txt
+#/gate/HounsfieldMaterialGenerator/SetDensityTable                   ../CT_data/Schneider2000DensitiesTable.txt
+/gate/HounsfieldMaterialGenerator/SetMaterialTable                  ../CT_data/CCB_MaterialsTable.txt
+/gate/HounsfieldMaterialGenerator/SetDensityTable                   ../CT_data/CCB_DensitiesTable.txt
+/gate/HounsfieldMaterialGenerator/SetDensityTolerance               0.05 g/cm3
+/gate/HounsfieldMaterialGenerator/SetOutputMaterialDatabaseFilename patient-HUmaterials.db
+/gate/HounsfieldMaterialGenerator/SetOutputHUMaterialFilename       patient-HU2mat.txt
+/gate/HounsfieldMaterialGenerator/Generate
+
+
+#=====================================================
+# GEOMETRY + PATIENT'S CT
+#=====================================================
+
+/control/execute ../Geometry/patient_positrons.mac
+
+#=====================================================
+# PHYSICS
+#=====================================================
+
+/control/execute ../Physics/protonRT_patient.mac
+
+#=====================================================
+# ACTORS
+#=====================================================
+
+# Statistics for the patient
+/gate/actor/addActor               SimulationStatisticActor stat
+/gate/actor/stat/save              stat.txt
+/gate/actor/stat/saveEveryNSeconds 300
+
+# Dose actor for the patient
+/control/execute ../Actors/patient_dose.mac
+
+# Phase Space Actor
+/control/execute ../Actors/ps_patient.mac
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+/gate/physics/print physics.txt
+
+#=====================================================
+# SOURCE
+#=====================================================
+
+/control/execute ../Sources/tps_source.mac
+
+#=====================================================
+# RANDOM
+#=====================================================
+
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+#=====================================================
+# ACQUISITION SETTINGS   
+#=====================================================
+
+
+/gate/application/setTotalNumberOfPrimaries 6890000
+/gate/application/startDAQ

@@ -1,0 +1,24 @@
+/gate/actor/addActor PhaseSpaceActor ps_actor_patient
+
+/gate/actor/ps_actor_patient/save ps_patient.root
+/gate/actor/ps_actor_patient/attachTo patient
+
+/gate/actor/ps_actor_patient/storeSecondaries true
+/gate/actor/ps_actor_patient/enableTime true
+/gate/actor/ps_actor_patient/enableEmissionPoint true
+/gate/actor/ps_actor_patient/enableProductionProcess  true
+/gate/actor/ps_actor_patient/enableTProd true
+
+/gate/actor/ps_actor_patient/enableLocalTime false
+/gate/actor/ps_actor_patient/enableProductionVolume false
+/gate/actor/ps_actor_patient/enableWeight false
+/gate/actor/ps_actor_patient/enableMass false
+/gate/actor/ps_actor_patient/enableXDirection false
+/gate/actor/ps_actor_patient/enableYDirection false
+/gate/actor/ps_actor_patient/enableZDirection false
+/gate/actor/ps_actor_patient/enablePDGCode false
+/gate/actor/ps_actor_patient/enableTOut false
+
+/gate/actor/ps_actor_patient/addFilter particleFilter
+/gate/actor/ps_actor_patient/particleFilter/addParticle gamma
+/gate/actor/ps_actor_patient/particleFilter/addParentParticle e+
