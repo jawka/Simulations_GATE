@@ -5,6 +5,7 @@
 #QGSP_INCLXX_HP_EMY for prompt gamma
 #emstandard_opt3
 #QBBC_EMY suggested by Loic Grevoilt
+#GATE RT-ion QBBC_EMZ
 
 /gate/physics/ActivateStepLimiter proton
 /gate/physics/ActivateStepLimiter deuteron

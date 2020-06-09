@@ -76,7 +76,7 @@
 
 #/tracking/verbose 1
 
-/gate/application/setTotalNumberOfPrimaries 100000000
+/gate/application/setTotalNumberOfPrimaries 50000000
 /gate/application/setTimeStart 0. s
 /gate/application/setTimeStop 1000. s
 /gate/application/startDAQ

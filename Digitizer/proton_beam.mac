@@ -36,11 +36,11 @@
 /gate/output/root/setRootCoincidencesFlag 1
 
 
-/gate/output/ascii/enable
-/gate/output/ascii/setFileName proton_beam_results
-/gate/output/ascii/setOutFileHitsFlag 0
-/gate/output/ascii/setOutFileSinglesFlag 1
-/gate/output/ascii/setOutFileCoincidencesFlag 1
+#/gate/output/ascii/enable
+#/gate/output/ascii/setFileName proton_beam_results
+#/gate/output/ascii/setOutFileHitsFlag 0
+#/gate/output/ascii/setOutFileSinglesFlag 1
+#/gate/output/ascii/setOutFileCoincidencesFlag 1
 
 ### COINCIDENCES SORTER 
 

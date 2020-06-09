@@ -3,7 +3,9 @@
 /gate/world/geometry/setXLength 1100. mm
 /gate/world/geometry/setYLength 1100. mm
 /gate/world/geometry/setZLength 1500. mm
-
+/gate/world/vis/forceWireframe 1
+/gate/world/vis/forceSolid 0
+/gate/world/vis/setColor black
 
 # SCANNER
 

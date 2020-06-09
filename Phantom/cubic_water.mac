@@ -3,7 +3,7 @@
 /gate/world/daughters/name phantom
 /gate/world/daughters/insert box
 /gate/phantom/setMaterial Water
-/gate/phantom/vis/forceWireframe
+/gate/phantom/vis/forceSolid
 /gate/phantom/vis/setColor blue
 /gate/phantom/geometry/setXLength 250. mm
 /gate/phantom/geometry/setYLength 250. mm

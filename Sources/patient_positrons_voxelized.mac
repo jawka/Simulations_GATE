@@ -1,0 +1,27 @@
+# ALWAYS USE THE KEYWORD voxel TO DECLARE THE TYPE
+/gate/source/addSource positrons voxel
+
+# DECLARATION THAT THE VOXELIZED SOURCE WILL BE ENTERED USING IMAGE DATA
+/gate/source/positrons/reader/insert image
+
+# INSERT THE TRANSLATOR THAT WILL CONVERT THE IMAGE FROM DIGITAL VALUES TO ACTIVITY VALUES 
+/gate/source/positrons/imageReader/translator/insert linear
+/gate/source/positrons/imageReader/linearTranslator/setScale 0.00083333333333 Bq
+#/gate/source/positrons/imageReader/linearTranslator/setScale 1. Bq
+
+# THE FOLLOWING LINE ALLOWS YOU TO INSERT THE IMAGE DATA USING THE APPROPRIATE EXTENSION FILE
+/gate/source/positrons/imageReader/readFile ../patient_positrons/beta_map_final_20.mhd 
+/gate/source/positrons/imageReader/verbose 0
+
+# SO THE VOXELIZED SOURCE HAS TO BE SHIFTED OVER HALF ITS DIMENSION .IN THE NEGATIVE DIRECTION ON EACH AXIS  
+#/gate/source/positrons/setPosition -86.979 -52.4355 -101.4 mm 
+#/gate/source/positrons/dump 1 
+ 
+ # THE FOLLOWING LINES CHARACTERIZE THE SIZE (NO DIFFERENCE WITH AN ANALYTICAL SOURCE)
+/gate/source/positrons/gps/particle gamma
+/gate/source/positrons/gps/energytype Mono
+/gate/source/positrons/gps/monoenergy 511. keV
+/gate/source/positrons/setType backtoback
+/gate/source/positrons/gps/angtype iso 
+/gate/source/positrons/TranslateTheSourceAtThisIsoCenter -0.7 -248.1 -642.3 mm 
+#/gate/source/positrons/visualize

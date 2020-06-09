@@ -1,0 +1,9 @@
+/gate/source/addSource PBS TPSPencilBeam
+/gate/source/PBS/setParticleType proton
+/gate/source/PBS/setPlan plan_cirs.txt
+/gate/source/PBS/setFlatGenerationFlag false
+/gate/source/PBS/setSpotIntensityAsNbIons false
+/gate/source/PBS/setSigmaEnergyInMeVFlag true
+/gate/source/PBS/setSortedSpotGenerationFlag false
+/gate/source/PBS/setFlatGenerationFlag false
+/gate/source/PBS/setSourceDescriptionFile ../GTR3_source_description.txt
