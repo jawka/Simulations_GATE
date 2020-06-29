@@ -22,10 +22,9 @@
 # GEOMETRY
 #=====================================================
 
-/control/execute ../Geometry/Modular_JPET_electron.mac
-/gate/plastic/attachCrystalSD
+/control/execute ../Geometry/Modular_24_simple.mac
 
-/gate/geometry/setIonisationPotential PMMA 74. eV
+/gate/geometry/setIonisationPotential PMMA 80. eV
 
 #=====================================================
 # PHANTOM
@@ -48,7 +47,7 @@
 /control/execute ../Actors/phantom_statistics.mac
 
 # Dose actor for the phantom
-/control/execute ../Actors/phantom_dose_proton.mac
+/control/execute ../Actors/phantom_dose_electron.mac
 
 # Phase Space Actor
 /control/execute ../Actors/ps_test_electron.mac
@@ -77,7 +76,7 @@
 # RANDOM
 #=====================================================
 
-/gate/random/setEngineName MersenneTwister
+#/gate/random/setEngineName MersenneTwister
 #/gate/random/setEngineSeed 123456789
 /gate/random/setEngineSeed auto
 
@@ -87,7 +86,7 @@
 
 #/tracking/verbose 1
 
-/gate/application/setTotalNumberOfPrimaries 10000000
-/gate/application/setTimeStart 0. ms
-/gate/application/setTimeStop 1. ms
+/gate/application/setTotalNumberOfPrimaries 500000
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 1. s
 /gate/application/startDAQ

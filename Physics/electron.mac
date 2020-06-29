@@ -1,4 +1,4 @@
-/gate/physics/addPhysicsList QGSP_BIC_HP_EMY
+/gate/physics/addPhysicsList QGSP_BIC_HP_EMZ
 
 #QGSP_BIC_HP
 #QGSP_BERT_HP_EMZ

@@ -1,6 +1,6 @@
 /gate/actor/addActor PhaseSpaceActor ps_actor_outgoing
 
-/gate/actor/ps_actor_outgoing/save output/ps_actor_phantom_outgoing.root
+/gate/actor/ps_actor_outgoing/save ps_actor_phantom_outgoing.root
 /gate/actor/ps_actor_outgoing/attachTo phantom
 
 /gate/actor/ps_actor_outgoing/storeOutgoingParticles true
