@@ -1,0 +1,19 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 110. mm
+/gate/world/geometry/setYLength 110. mm
+/gate/world/geometry/setZLength 1500. mm
+/gate/world/vis/forceWireframe 1
+/gate/world/vis/forceSolid 0
+/gate/world/vis/setColor black
+
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert box
+/gate/phantom/geometry/setXLength 100. mm
+/gate/phantom/geometry/setYLength 100. mm
+/gate/phantom/geometry/setZLength 500. mm
+/gate/phantom/setMaterial PMMA
+/gate/phantom/vis/setColor white
+/gate/phantom/vis/forceSolid 0
+
+/gate/phantom/attachPhantomSD
