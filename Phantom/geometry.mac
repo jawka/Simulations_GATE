@@ -1,0 +1,68 @@
+# WORLD 
+
+/gate/world/geometry/setXLength 800. mm
+/gate/world/geometry/setYLength 800. mm
+/gate/world/geometry/setZLength 1600. mm
+/gate/world/vis/forceWireframe 1
+/gate/world/vis/forceSolid 0
+/gate/world/vis/setColor white
+
+# PHANTOM
+
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert box
+/gate/phantom/geometry/setXLength 100. mm
+/gate/phantom/geometry/setYLength 100. mm
+/gate/phantom/geometry/setZLength 500. mm
+/gate/phantom/setMaterial PMMA
+/gate/phantom/vis/setColor white
+/gate/phantom/vis/forceSolid 1
+
+/gate/phantom/attachPhantomSD
+
+# DETECTOR
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert cylinder
+/gate/scanner/geometry/setRmin 0. mm
+/gate/scanner/geometry/setRmax 38.1 mm
+/gate/scanner/geometry/setHeight 76.2 mm
+/gate/scanner/placement/setTranslation 138.1 0.0 0.0 mm
+/gate/scanner/setMaterial Air
+/gate/scanner/vis/setColor blue
+/gate/scanner/vis/forceSolid 1
+
+/gate/scanner/daughters/name module
+/gate/scanner/daughters/insert cylinder
+/gate/module/geometry/setRmin 0. mm
+/gate/module/geometry/setRmax 38.1 mm
+/gate/module/geometry/setHeight 76.2 mm
+/gate/module/setMaterial LSO
+/gate/module/vis/setColor yellow
+/gate/module/vis/forceSolid 1
+
+/gate/systems/scanner/level1/attach module
+/gate/module/attachCrystalSD
+
+# COLLIMATORS 
+
+/gate/world/daughters/name Lcollimator
+/gate/world/daughters/insert box
+/gate/Lcollimator/geometry/setXLength 200. mm
+/gate/Lcollimator/geometry/setYLength 200. mm
+/gate/Lcollimator/geometry/setZLength 300. mm
+/gate/Lcollimator/placement/setTranslation 200.0 0.0 -188.15 mm
+/gate/Lcollimator/setMaterial Lead
+/gate/Lcollimator/vis/setColor red
+/gate/Lcollimator/vis/forceSolid 1
+
+/gate/world/daughters/name Rcollimator
+/gate/world/daughters/insert box
+/gate/Rcollimator/geometry/setXLength 200. mm
+/gate/Rcollimator/geometry/setYLength 200. mm
+/gate/Rcollimator/geometry/setZLength 300. mm
+/gate/Rcollimator/placement/setTranslation 200.0 0.0 188.15 mm
+/gate/Rcollimator/setMaterial Lead
+/gate/Rcollimator/vis/setColor red
+/gate/Rcollimator/vis/forceSolid 1
+
